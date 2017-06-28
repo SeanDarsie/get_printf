@@ -12,3 +12,10 @@ $(NAME): $(OBJ)
 $(OBJ):
 	gcc -c $(FILES)
 
+clean:
+	rm $(NAME) ft_printf.o
+
+fclean: clean
+
+re: fclean all
+

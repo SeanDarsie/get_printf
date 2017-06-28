@@ -1,5 +1,6 @@
 #include "unistd.h"
 #include "stdarg.h"
+#include <stdio.h>
 
 void ft_putchar(char c)
 {
@@ -14,6 +15,8 @@ int ft_printf(char *fmt, ...)
 	while(fmt[i])
 		ft_putchar(fmt[i++]);
 	va_start(ap, fmt);
+	i = va_arg(ap, int);
+	printf("%i", i);
 	va_end(ap);
 	return (0);
 }
